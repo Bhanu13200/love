@@ -1,0 +1,247 @@
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
+  background: #0b1522;
+  justify-content: center;
+  align-items: center;
+}
+:root {
+  --cls: #0ab3ff;
+  --clr: #540968;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform: rotate(-45deg);
+  background: #f20000;
+  box-shadow: -10px 10px 90px #f20000;
+  cursor: pointer;
+  animation: heart 0.9s infinite;
+}
+
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+  25% {
+    transform: rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.3);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #f20000;
+  border-radius: 100px;
+  top: -50%;
+  box-shadow: -10px 10px 90px #f20000;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #f20000;
+  right: -50%;
+  border-radius: 100px;
+  box-shadow: -10px 10px 90px #f20000;
+}
+
+.r {
+  top: -180px;
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+.r .text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+}
+
+.r .hover-text {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  color: var(--cls);
+  overflow: hidden;
+  animation: rr 1.3s infinite;
+}
+
+@keyframes rr {
+  100% {
+    width: 100%;
+    filter: drop-shadow(0 0 40px var(--cls));
+  }
+}
+.e {
+  top: 150px;
+  left: 20px;
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+.e .text {
+  color: transparent;
+}
+
+.e .hover-text {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  color: var(--clr);
+  overflow: hidden;
+  animation: ee 1.5s infinite;
+}
+
+@keyframes ee {
+  100% {
+    width: 100%;
+    filter: drop-shadow(0 0 40px var(--clr));
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    background: #0b1522;
+    justify-content: center;
+    align-items: center;
+  }
+  :root {
+    --cls: #0ab3ff;
+    --clr: #540968;
+  }
+
+  .container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform: rotate(-45deg);
+    background: #f20000;
+    box-shadow: -10px 10px 90px #f20000;
+    cursor: pointer;
+    animation: heart 0.9s infinite;
+  }
+
+  @keyframes heart {
+    0% {
+      transform: rotate(-45deg) scale(0.8);
+    }
+    25% {
+      transform: rotate(-45deg) scale(1);
+    }
+    50% {
+      transform: rotate(-45deg) scale(1.3);
+    }
+    100% {
+      transform: rotate(-45deg) scale(1);
+    }
+  }
+
+  .container::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #f20000;
+    border-radius: 75px;
+    top: -50%;
+    box-shadow: -10px 10px 90px #f20000;
+  }
+
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #f20000;
+    right: -50%;
+    border-radius: 75px;
+    box-shadow: -10px 10px 90px #f20000;
+  }
+
+  .r {
+    top: -160px;
+    position: relative;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 80px;
+    cursor: pointer;
+  }
+
+  .r .text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  }
+
+  .r .hover-text {
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    color: var(--cls);
+    overflow: hidden;
+    animation: rr 1.3s infinite;
+  }
+
+  @keyframes rr {
+    100% {
+      width: 100%;
+      filter: drop-shadow(0 0 40px var(--cls));
+    }
+  }
+  .e {
+    top: 120px;
+    left: 20px;
+    position: relative;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 80px;
+    cursor: pointer;
+  }
+
+  .e .text {
+    color: transparent;
+  }
+
+  .e .hover-text {
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    color: var(--clr);
+    overflow: hidden;
+    animation: ee 1.5s infinite;
+  }
+
+  @keyframes ee {
+    100% {
+      width: 100%;
+      filter: drop-shadow(0 0 40px var(--clr));
+    }
+  }
+}
